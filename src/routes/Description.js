@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Detail from '../components/Detail';
+import styles from './Description.module.css';
 function Description() {
   const [loading, setLoading] = useState(true);
   const [detail, setDetail] = useState();
@@ -17,16 +18,14 @@ function Description() {
     getDetails();
   }, []);
   return (
-    <div>
+    <div className={styles.container}>
       {loading ? (
-        <h1>Loading</h1>
+        <h1 className={styles.loading}>Loading</h1>
       ) : (
         <Detail
           background_image={detail.background_image}
           movie_img={detail.medium_cover_image}
           title={detail.title}
-          rating={detail.rating}
-          like_count={detail.like_count}
           description_full={detail.description_full}
         />
       )}

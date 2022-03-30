@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import Movie from '../components/Movie';
-import styles from './Home.module.css';
+import styles from './MovieSection.module.css';
 
 function MovieSection() {
+  const [isHovering,setIsHovering]=useState(true);
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
@@ -31,6 +32,7 @@ function MovieSection() {
               medium_cover_image={movie.medium_cover_image}
               title={movie.title}
               genres={movie.genres}
+              rating={movie.rating}
             />
           ))}
         </div>

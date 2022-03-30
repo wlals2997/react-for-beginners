@@ -1,32 +1,37 @@
-.style{
-    color:white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.img {
+  width: 720px;
+  height: 720px;
+  position: relative;
+  width: 100%;
+  background-color: rgb(97, 95, 95);
 }
-.img{
-    display: flex;
-    margin: auto;
-    position: relative;
+.movieImg {
+  position: absolute;
+  top: 240px;
+  left: 470px;
 }
-.description{
-    width:50%;
-    color: white;
-   margin: auto;
+.title {
+  color: white;
 }
-.movieImg{
-position: absolute;
-top: 60px;
-left: 850px;
+
+.description {
+  color: white;
+  font-weight: 500;
+}
+.movieDescription {
+  position: absolute;
+  top: 200px;
+  left: 750px;
+  width: 37%;
 }
 
 @media screen and (max-width: 1090px) {
-    .img {
-      width: 160%;
-    }
-    .movieImg{
-        left:165px;
-        top:30px;
-        width: 30%;
-    }
+  .img {
+    width: 160%;
   }
+  .movieImg {
+    left: 165px;
+    top: 30px;
+    width: 30%;
+  }
+}
