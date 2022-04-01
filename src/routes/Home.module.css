@@ -1,0 +1,10 @@
+.container{
+    background: linear-gradient(45deg, Violet, Orange);
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box{
+}
