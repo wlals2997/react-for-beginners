@@ -3,7 +3,7 @@ import Movie from '../components/Movie';
 import styles from './MovieSection.module.css';
 
 function MovieSection() {
-  const [isHovering,setIsHovering]=useState(true);
+ 
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
@@ -23,22 +23,23 @@ function MovieSection() {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        
         <div className={styles.movies}>
           {movies.map((movie) => (
             <Movie
               key={movie.id}
               id={movie.id}
               medium_cover_image={movie.medium_cover_image}
+              summary={movie.summary}
               title={movie.title}
               genres={movie.genres}
               rating={movie.rating}
+              
             />
+         
           ))}
         </div>
       )}
     </div>
-    
   );
 }
 export default MovieSection;

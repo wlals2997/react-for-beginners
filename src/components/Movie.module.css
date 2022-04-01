@@ -1,13 +1,25 @@
-.movie__title{
-  
-}
-.movie__genres{
+.movie__genres {
   padding: 0px;
   font-size: 17px;
 }
 
-
-.star_icon{
+.star_icon {
   color: rgb(255, 230, 0);
   font-size: 20px;
+}
+.movie {
+  position: relative;
+}
+.onmouse {
+  position: absolute;
+  background-color: black;
+  color: white;
+  top: 1px;
+  width: 230px;
+  height: 344px;
+  padding: 5px 20px;
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0.8;
+ 
 }

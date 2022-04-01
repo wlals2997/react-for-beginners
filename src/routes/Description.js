@@ -17,6 +17,7 @@ function Description() {
   useEffect(() => {
     getDetails();
   }, []);
+  
   return (
     <div className={styles.container}>
       {loading ? (
