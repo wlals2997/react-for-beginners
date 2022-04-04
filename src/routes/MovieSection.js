@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import Movie from '../components/Movie';
 import styles from './MovieSection.module.css';
-
+import Loading from '../components/Loading';
 function MovieSection() {
- 
   const [loading, setLoading] = useState(true);
   const [movies, setMovies] = useState([]);
   const getMovies = async () => {
@@ -21,7 +20,7 @@ function MovieSection() {
   return (
     <div className={styles.container}>
       {loading ? (
-        <h1>Loading...</h1>
+        <Loading></Loading>
       ) : (
         <div className={styles.movies}>
           {movies.map((movie) => (
@@ -33,9 +32,7 @@ function MovieSection() {
               title={movie.title}
               genres={movie.genres}
               rating={movie.rating}
-              
             />
-         
           ))}
         </div>
       )}

@@ -3,23 +3,25 @@ import { Link } from 'react-router-dom';
 import styles from './Movie.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function Movie({ medium_cover_image, title, genres, id, rating, summary }) {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
     <Link to={`/movie/${id}`}>
-      <div className={styles.movie} onMouseEnter={() => {
-            setIsHovering(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovering(false);
-          }}>
+      <div
+        className={styles.movie}
+        onMouseEnter={() => {
+          setIsHovering(true);
+        }}
+        onMouseLeave={() => {
+          setIsHovering(false);
+        }}
+      >
         <img
           src={medium_cover_image}
           alt={title}
           className={styles.movie__img}
-          
         ></img>
         {isHovering ? (
           <div

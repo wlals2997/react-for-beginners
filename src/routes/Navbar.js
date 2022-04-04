@@ -17,10 +17,10 @@ function Navbar() {
             <a href='/movie'>영화</a>
           </li>
           <li className={styles.menu}>
-            <a href='/movie'>예매</a>
+            <a href='/movie'>영화</a>
           </li>
           <li className={styles.menu}>
-            <a href='/movie'>스토어</a>
+            <a href='/movie'>영화</a>
           </li>
         </ul>
       </nav>
