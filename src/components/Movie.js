@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import styles from './Movie.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 function Movie({ medium_cover_image, title, genres, id, rating, summary }) {
+  //mouse 이벤트 useState함수
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -24,15 +25,7 @@ function Movie({ medium_cover_image, title, genres, id, rating, summary }) {
           className={styles.movie__img}
         ></img>
         {isHovering ? (
-          <div
-            className={styles.onmouse}
-            onMouseEnter={() => {
-              setIsHovering(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovering(false);
-            }}
-          >
+          <div className={styles.onmouse}>
             <span>
               {summary.length > 80 ? `${summary.slice(0, 80)}...` : summary}
             </span>
